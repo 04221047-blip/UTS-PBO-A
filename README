@@ -1,0 +1,24 @@
+# 🧺 Sistem Laundry Mahasiswa ITK
+
+Repositori ini berisi *source code* dan laporan analisis untuk **Ujian Tengah Semester (UTS) Mata Kuliah Pemrograman Berorientasi Objek (PBO)**.
+
+Proyek ini merupakan simulasi dari sistem pencucian (Laundry Mahasiswa) yang mengedepankan keamanan data dan aturan bisnis yang ketat menggunakan paradigma *Object-Oriented Programming* (OOP).
+
+## 🎯 Fitur Utama & Aturan Bisnis
+Sistem ini dirancang dengan aturan bisnis sebagai berikut:
+1. **Validasi Kapasitas Mesin:** Sistem akan menolak memproses pesanan cucian baru jika `Kapasitas Mesin Laundry` sudah penuh.
+2. **Validasi Status Pembayaran:** Pelanggan tidak diizinkan untuk mengambil paket cucian jika `Status Pembayaran` belum "Lunas".
+
+## 🛡️ Penerapan OOP (Enkapsulasi Mutlak)
+Proyek ini ditulis dalam bahasa **Kotlin** dengan menerapkan prinsip **Data Hiding**:
+* Variabel sensitif seperti `kapasitasTerpakai` (pada Kasir) dan `statusPembayaran` (pada PaketCucian) dikunci menggunakan visibilitas `private set`.
+* Modifikasi data tersebut tidak dapat dilakukan sembarangan menggunakan operator `=`, melainkan wajib melalui "Jalur Resmi" (*Custom Setter* / *Method Public*) yang telah dilengkapi dengan logika validasi bisnis (seperti `prosesCucianBaru()` dan `lunasiPembayaran()`).
+
+## 🚀 Cara Menjalankan Simulasi
+1. Buka *source code* pada file (misalnya: `LaundryMahasiswa.kt`).
+2. Salin seluruh kode dan jalankan melalui IDE (seperti IntelliJ IDEA) atau kompilator *online* di [Kotlin Playground](https://play.kotlinlang.org/).
+3. Perhatikan *console output* di bagian bawah untuk melihat hasil eksekusi dari `main function`, yang mencakup simulasi skenario **GAGAL** (pelanggaran aturan/mesin penuh/belum lunas) dan skenario **SUKSES** (transaksi sah).
+
+---
+**Author:** Rahmad  
+**Institusi:** Institut Teknologi Kalimantan
